@@ -695,7 +695,7 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
 .board.empty .wait svg{width:44px;height:28px}
 @media (max-width:760px){.board.empty .wait{padding:8px 6px;font-size:14px}.board.empty .wait svg{width:36px;height:22px}.board.empty{padding-top:6px;padding-bottom:6px}}
 
-.frame.map .lamp{display:none}
+.frame .lamp{display:none}
 
 .sleeve .band{background:
    radial-gradient(circle at 0 100%,transparent 12px,rgba(232,207,143,.24) 13px,transparent 14px) 0 0/28px 14px,
@@ -708,6 +708,35 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
 
 .sheet .row{grid-template-columns:58px 1fr auto}.sheet .rn{white-space:nowrap}
 @media (max-width:760px){.sheet .row{grid-template-columns:52px 1fr auto}}
+
+.sheetwrap{perspective:1600px}
+.sheetwrap .cast{position:absolute;top:0;bottom:0;z-index:2;pointer-events:none;opacity:0;width:50%}
+.sheetwrap .cast[data-side=r]{left:50%;background:linear-gradient(90deg,rgba(40,28,8,.45),rgba(40,28,8,.12) 40%,rgba(40,28,8,0) 80%)}
+.sheetwrap .cast[data-side=l]{left:0;background:linear-gradient(270deg,rgba(40,28,8,.45),rgba(40,28,8,.12) 40%,rgba(40,28,8,0) 80%)}
+.sheetwrap .cast[data-side=one]{left:0;width:100%;background:linear-gradient(90deg,rgba(40,28,8,.4),rgba(40,28,8,0) 70%)}
+
+
+.hdr.solid{background:linear-gradient(90deg,rgba(6,16,11,.95) 0,rgba(6,16,11,.94) calc(50% - 400px),rgba(6,16,11,.42) calc(50% - 250px),rgba(6,16,11,.42) calc(50% - 130px),rgba(6,16,11,.82) calc(50% - 40px),rgba(6,16,11,.82) 100%)}
+@media (max-width:980px){.hdr.solid{background:linear-gradient(90deg,rgba(6,16,11,.95) 0,rgba(6,16,11,.92) 55%,rgba(6,16,11,.8) 100%)}}
+
+.sheet .row .rd{-webkit-line-clamp:4!important;font-size:12.5px;line-height:1.2}
+.sheet .row{padding-top:2px!important;padding-bottom:2px!important}
+.sheet .tg i{font-size:9.5px;padding:1px 4px;line-height:1.3}
+.sheet .rt{line-height:1.2}
+
+@media (min-width:761px) and (max-height:740px), (min-width:761px) and (max-width:1100px) and (max-height:820px){
+  .karte .sub{display:none}
+  .karte h2{font-size:clamp(28px,3vw,38px)}
+  .noren{margin-top:10px;padding-top:6px}
+  .nren{padding:8px 10px 13px}.nren small{display:none}
+  .board2{margin-top:8px;padding-top:8px;padding-bottom:6px}
+  .sheet{height:calc(5 * 58px + 34px)}.sheet .half{grid-auto-rows:58px}
+  .knote{margin-top:8px}
+}
+
+@media (max-width:760px){.sheet{height:auto;min-height:calc(5 * 76px + 34px)}.sheet .half{grid-auto-rows:minmax(76px,auto)}.sheet .row .rd{font-size:12px;line-height:1.18}.sheet .row{gap:0 8px}#karte{scroll-margin-top:calc(var(--hdr) - 42px)}}
+@media (min-width:761px) and (max-width:1100px) and (min-height:821px){.sheet{height:calc(5 * 92px + 34px)}.sheet .half{grid-auto-rows:92px}}
+@media (min-width:761px) and (max-width:1100px) and (max-height:820px){.sheet{height:calc(5 * 76px + 34px)}.sheet .half{grid-auto-rows:76px}}
 .kl{width:100%;height:100%;display:block}.pre .kl.big{width:min(46vw,230px);height:auto;filter:drop-shadow(0 0 22px rgba(255,200,97,.35))}.sleeve .band .kl{width:46px;height:46px}
 .post .txt{max-width:660px}.post h1{font-size:clamp(44px,min(5.8vw,10vh),92px)}
 .hero{--lx:9.5%;--ly:15%;--px:0%}@media (max-width:760px), (orientation:portrait) and (max-width:1100px){.hero{--lx:18%;--ly:31%;--px:16%}}
@@ -742,7 +771,7 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
   <div class="shade"></div>
   <span class="bulb" aria-hidden="true"></span>
   <div class="pre" aria-hidden="true">
-    <div class="inner"><svg class="kl big" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="55" fill="none" stroke="#fff" stroke-width="4"/><text x="60" y="74" text-anchor="middle" fill="#fff" style="font:italic 500 40px var(--serif)">Kiku</text></svg><span class="sub">Sushi · Ramen · Cocktails</span></div>
+    <div class="inner"><svg class="kl big" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="55" fill="none" stroke="#fff" stroke-width="4"/><text x="60" y="74" text-anchor="middle" fill="#fff" style="font:italic 500 40px var(--serif)">Kiku</text></svg><span class="sub">Sushi · Nudelsuppen · Sake</span></div>
   </div>
   <button class="cord" id="cord" type="button" aria-label="Licht einschalten"><span class="knob"></span></button>
   <div class="post">
@@ -979,7 +1008,7 @@ const LIEB=[
 ];
 const REV=[
  {n:"Mara",t:"vor 2 Wochen",q:"Die Platte für vier war ein Fest – schön angerichtet, alles frisch, und das Licht im Salon macht den Abend."},
- {n:"Daniel",t:"vor 1 Monat",q:"Red Dragon und Shoyu Ramen – beides hervorragend. Der Service hat sich Zeit genommen und gut beraten."},
+ {n:"Daniel",t:"vor 1 Monat",q:"Akai Roll und Shiro Ramen – beides hervorragend. Der Service hat sich Zeit genommen und gut beraten."},
  {n:"Selin",t:"vor 1 Monat",q:"Endlich Sushi mit Atmosphäre. Der Shiso Spritz ist mein neuer Favorit."},
  {n:"Reto",t:"vor 2 Monaten",q:"Wir haben angerufen und die Platte zum Abholen bestellt – pünktlich bereit und sehr grosszügig."},
  {n:"Jana",t:"vor 3 Monaten",q:"Vegi-Optionen, die nicht nach Notlösung schmecken. Die Gyoza sind ein Muss."},
@@ -1010,7 +1039,7 @@ const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 (function(){
   const hero=$("#hero"), cord=$("#cord"), html=document.documentElement, now=()=>performance.now();
-  let p=0,target=0,done=false,doneAt=0,tFull=0,raf=0;
+  let p=0,target=0,done=false,doneAt=0,tFull=0,raf=0,extra=0,pass=false;
   const set=v=>{hero.style.setProperty("--p",v.toFixed(4));hero.style.setProperty("--r",(v*100).toFixed(2));};
   const L=[]; const on=(t,f,o)=>{ addEventListener(t,f,o); L.push([t,f,o]); };
   function finish(){ if(done) return; done=true; doneAt=now(); p=1; set(1); cancelAnimationFrame(raf); raf=0;
@@ -1019,14 +1048,16 @@ const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
   const check=()=>{ if(!done && target>=1 && tFull && (p>=0.99 || now()-tFull>900)) finish(); };
   function loop(){ raf=0; if(done) return; p+=(target-p)*0.085; if(Math.abs(target-p)<0.002) p=target; set(p); check(); if(!done) raf=requestAnimationFrame(loop); }
   const go=()=>{ if(!raf && !done) raf=requestAnimationFrame(loop); };
-  const push=d=>{ target=Math.max(0,Math.min(1,target+d)); if(target>.985) target=1; if(target>=1 && !tFull){ tFull=now(); setTimeout(check,950); } go(); check(); };
-  const swallow=e=>{ if(done){ if(now()-doneAt<650) e.preventDefault(); return true; } e.preventDefault(); return false; };
+  const push=d=>{ if(target>=1&&d>0) extra+=d; target=Math.max(0,Math.min(1,target+d)); if(target>.985) target=1; if(target>=1 && !tFull){ tFull=now(); setTimeout(check,950); } go(); check(); };
+  const swallow=e=>{ if(done){ if(!pass && now()-doneAt<650) e.preventDefault(); return true; } e.preventDefault(); return false; };
   if(reduce || scrollY>10 || location.hash){ target=1; p=1; set(1); done=true; hero.classList.remove("off"); return; }
   html.classList.add("locked"); scrollTo(0,0);
   
   on("scroll",()=>{ if(!done && scrollY>0) scrollTo(0,0); },{passive:true});
   on("wheel",e=>{ if(swallow(e)) return;
-    const dy=e.deltaMode===1?e.deltaY*32:e.deltaMode===2?e.deltaY*600:e.deltaY; push(Math.max(-.34,Math.min(.34,dy/700))); },{passive:false});
+    const dy=e.deltaMode===1?e.deltaY*32:e.deltaMode===2?e.deltaY*600:e.deltaY; push(Math.max(-.34,Math.min(.34,dy/700)));
+    
+    if(!done && extra>.25){ pass=true; finish(); } },{passive:false});
   let ty=null;
   on("touchstart",e=>{ ty=e.touches[0].clientY; },{passive:true});
   on("touchmove",e=>{ if(swallow(e)||ty==null) return; const y=e.touches[0].clientY; push((ty-y)/420); ty=y; },{passive:false});
@@ -1081,25 +1112,26 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.ta
   const spreadHTML=()=>two()?half(book[at])+half(book[at+1]):half(book[at]);
   
   let cur=null;
-  function endTurn(){ if(!cur) return; const c=cur; cur=null; c.anims.forEach(a=>{ try{a.cancel()}catch(e){} }); c.leaf.remove(); sw.classList.remove("turning"); sheet.innerHTML=c.final; }
+  function endTurn(){ if(!cur) return; const c=cur; cur=null; c.anims.forEach(a=>{ try{a.cancel()}catch(e){} }); c.leaf.remove(); c.cast.remove(); sw.classList.remove("turning"); sheet.innerHTML=c.final; }
   async function turn(d,html){ endTurn();
     const oldH=[...sheet.children].map(h=>h.outerHTML), box=document.createElement("div"); box.innerHTML=html; const newH=[...box.children].map(h=>h.outerHTML);
     const dbl=two(), bad=h=>!h.length||(dbl&&h.length<2)||(!dbl&&h.length!==1);
     if(bad(oldH)||bad(newH)||!sheet.animate){ sheet.innerHTML=html; return; }
     const leaf=document.createElement("div"); leaf.className="sheet leaf"; leaf.setAttribute("aria-hidden","true"); sw.appendChild(leaf); sw.classList.add("turning");
-    const me={leaf,anims:[],final:html}; cur=me;
-    const run=(side,h,from,to,ms,ease)=>{ leaf.dataset.side=side; leaf.innerHTML=h+'<i class="shade"></i>'; const sh=leaf.lastChild;
+    const cast=document.createElement("i"); cast.className="cast"; sw.appendChild(cast);
+    const me={leaf,cast,anims:[],final:html}; cur=me;
+    const run=(side,h,from,to,ms,ease,castSide,c0,c1)=>{ leaf.dataset.side=side; leaf.innerHTML=h+'<i class="shade"></i>'; const sh=leaf.lastChild; cast.dataset.side=castSide;
       const o={duration:ms,easing:ease,fill:"forwards"}, darkFrom=Math.abs(from)>Math.abs(to)?.85:0, darkTo=Math.abs(from)>Math.abs(to)?0:.85;
-      const a=leaf.animate([{transform:`rotateY(${from}deg)`},{transform:`rotateY(${to}deg)`}],o), b=sh.animate([{opacity:darkFrom},{opacity:darkTo}],o);
-      me.anims=[a,b]; return a.finished; };
-    const IN="cubic-bezier(.42,.05,.72,.38)", OUT="cubic-bezier(.22,.68,.32,1)";
+      const a=leaf.animate([{transform:`rotateY(${from}deg)`},{transform:`rotateY(${(from+to)/2}deg) translateZ(14px)`,offset:.5},{transform:`rotateY(${to}deg)`}],o), b=sh.animate([{opacity:darkFrom},{opacity:darkTo}],o), c=cast.animate([{opacity:c0},{opacity:c1}],o);
+      me.anims=[a,b,c]; return a.finished; };
+    const IN="cubic-bezier(.55,.06,.68,.53)", OUT="cubic-bezier(.25,.46,.45,.94)";
     try{
-      if(dbl&&d>0){ sheet.innerHTML=oldH[0]+newH[1]; await run("r",oldH[1],0,-90,300,IN); if(cur!==me) return; await run("l",newH[0],90,0,420,OUT); }
-      else if(dbl){ sheet.innerHTML=newH[0]+oldH[1]; await run("l",oldH[0],0,90,300,IN); if(cur!==me) return; await run("r",newH[1],-90,0,420,OUT); }
-      else if(d>0){ sheet.innerHTML=newH[0]; await run("one",oldH[0],0,-92,520,"cubic-bezier(.4,0,.6,1)"); }
-      else { await run("one",newH[0],-92,0,520,"cubic-bezier(.4,0,.6,1)"); }
+      if(dbl&&d>0){ sheet.innerHTML=oldH[0]+newH[1]; await run("r",oldH[1],0,-90,480,IN,"r",.55,0); if(cur!==me) return; await run("l",newH[0],90,0,560,OUT,"l",0,.0); }
+      else if(dbl){ sheet.innerHTML=newH[0]+oldH[1]; await run("l",oldH[0],0,90,480,IN,"l",.55,0); if(cur!==me) return; await run("r",newH[1],-90,0,560,OUT,"r",0,0); }
+      else if(d>0){ sheet.innerHTML=newH[0]; await run("one",oldH[0],0,-92,760,"cubic-bezier(.45,.05,.4,1)","one",.5,0); }
+      else { await run("one",newH[0],-92,0,760,"cubic-bezier(.45,.05,.4,1)","one",0,0); }
     }catch(e){ return; }
-    if(cur===me){ cur=null; leaf.remove(); sw.classList.remove("turning"); sheet.innerHTML=html; } }
+    if(cur===me){ cur=null; leaf.remove(); cast.remove(); sw.classList.remove("turning"); sheet.innerHTML=html; } }
   function paint(dir){ const L=book[at], lc=L&&L.c; board.style.setProperty("--acc",lc?lc.acc:"#e8cf8f");
     const real=book.filter(p=>p.kind!=="blank").length;
     $("#pg").textContent="";
@@ -1302,7 +1334,7 @@ $$(".reveal,#moved").forEach(el=>io.observe(el));
 "Chashu, Ajitama-Ei, Narutomaki, Hühnerbrühe":"Chashu, ajitama egg, narutomaki, chicken broth",
 "Teriyaki, Gurke, Koriander, Gochujang-Mayo":"Teriyaki, cucumber, coriander, gochujang mayo",
 "Lachs, Thunfisch oder Crevetten · je 4 Stück":"Salmon, tuna or prawns · 4 pieces each",
-"8 vegetarische Teigtaschen, Sweet-Soja-Dip":"8 vegetarian dumplings, sweet soy dip","In der Schale mit Meersalz":"In the pod with sea salt","Favoriten":"Favourites","Speisekarte":"Menu","Lokal":"Restaurant","Sushi vom Brett, Ramen aus dem Topf und Sake-Drinks – an der Lindengasse 9 in der Luzerner Altstadt.":"Sushi from the board, ramen from the pot and sake drinks – on Lindengasse 9 in Lucerne’s old town.","Was am Tresen am häufigsten bestellt wird – frisch gerollt.":"What gets ordered most at the counter – freshly rolled.","Jedes Gericht hat eine Nummer – für Bestellungen am Telefon genügt sie.":"Every dish has a number – that’s all you need to order by phone.","Suchen: Gelbschwanz, Tofu, Udon, 246 …":"Search: yellowtail, tofu, udon, 246 …","Vegetarisch":"Vegetarian","Gekocht":"Cooked","Pikant":"Spicy","Abgeflämmt":"Flamed","Knusprig":"Crispy","Nichts Rohes: gekocht, abgeflämmt oder frittiert":"Nothing raw: cooked, flamed or fried","Nichts Rohes":"Nothing raw","VEG":"VEG","PIKANT":"SPICY","FLAMME":"FLAMED","KNUSPRIG":"CRISPY","Grosse Rollen":"Big rolls","Inside-Out":"Inside-out","Tempura-Rollen":"Tempura rolls","Kleine Teller & Bao":"Small plates & bao","Nudelsuppen":"Noodle soups","Die Platte":"The platter","für den Abend":"for the evening","in drei Schritten geplant":"planned in three steps","Sagen Sie uns, wie viele kommen, wie gross der Appetit ist und was Sie mögen – Auswahl und Preis stehen gleich daneben. Bestellt wird per Telefon.":"Tell us how many are coming, how hungry you are and what you like – the selection and price appear right next to it. Orders are taken by phone.","Gäste":"Guests","Appetit":"Appetite","Geschmack":"Taste","Ihre Auswahl":"Your selection","Leicht":"Light","Mittel":"Medium","Hungrig":"Hungry","Bunt":"Mixed","Ohne Fisch":"No fish","Treffen Sie oben Ihre Wahl – die Liste erscheint hier.":"Make your choice above – the list appears here.","Platte am Telefon bestellen":"Order the platter by phone","Auswahl kopieren":"Copy selection","Die Theke":"The counter","Ein Glas vorab oder zum Ausklang des Abends.":"A glass to start or to round off the evening.","Hausgemacht":"House-made","Sake Drinks":"Sake Drinks","Sake aus dem Haus":"House sake","Bier & Schaumwein":"Beer & sparkling","Japan · 4,9 % · 5 dl":"Japan · 4.9% · 50 cl","Stimmen":"Voices","unserer Gäste":"of our guests","Unsere":"Our","Preise in CHF, Mehrwertsteuer inbegriffen.":"Prices in CHF, VAT included.","Unverträglichkeiten? Sagen Sie es uns bei der Bestellung.":"Intolerances? Let us know when you order.","Lachs abgeflämmt, mit Yuzu-Mayo · 2 Stück":"Flamed salmon with yuzu mayo · 2 pieces","Knusper-Crevette, oben Thunfisch und Sriracha · 8 Stück":"Crispy prawn, topped with tuna and sriracha · 8 pieces","Knusper-Crevette unter Avocado · 8 Stück":"Crispy prawn under avocado · 8 pieces","Lachs im Tempurateig, Frischkäse · 6 Stück":"Salmon in tempura batter, cream cheese · 6 pieces","Cremige Schweinebrühe, Chashu, Ei und Mais":"Creamy pork broth, chashu, egg and corn","Schweinebauch mit Hoisin im Dampfbrötchen":"Pork belly with hoisin in a steamed bun","Drei Fische, fünfzehn Scheiben":"Three fish, fifteen slices","Sechs angebratene Teigtaschen, Ponzu-Dip":"Six pan-fried dumplings, ponzu dip","Grüne Sojabohnen mit Yuzu-Salz":"Green soybeans with yuzu salt","Teile":"pieces","je Gast":"per guest","CHF":"CHF","≈ CHF":"≈ CHF","Nigiri und Rollen neben einer schlanken Lampe, grüner Tee":"Nigiri and rolls next to a slim lamp, green tea","Gemischte Platte für vier, Blick von oben":"Mixed platter for four, from above","Kleine Rollen mit Thunfisch und Gurke":"Small rolls with tuna and cucumber","Lange Holztheke mit Sakeflaschen":"Long wooden counter with sake bottles","Unser Lokal liegt an der":"Our restaurant is on",", ein paar Schritte von der Reuss. Dunkles Holz, weiche Bänke und warmes Licht über jedem Tisch.":", a few steps from the Reuss. Dark wood, soft banquettes and warm light over every table.","Sake-Drinks aus dem Haus, passend zu Sushi – und ein helles Lager aus Luzern.":"House sake drinks that suit sushi – plus a pale lager from Lucerne."
+"8 vegetarische Teigtaschen, Sweet-Soja-Dip":"8 vegetarian dumplings, sweet soy dip","In der Schale mit Meersalz":"In the pod with sea salt","Sushi · Nudelsuppen · Sake":"Sushi · Noodle soups · Sake","Favoriten":"Favourites","Speisekarte":"Menu","Lokal":"Restaurant","Sushi vom Brett, Ramen aus dem Topf und Sake-Drinks – an der Lindengasse 9 in der Luzerner Altstadt.":"Sushi from the board, ramen from the pot and sake drinks – on Lindengasse 9 in Lucerne’s old town.","Was am Tresen am häufigsten bestellt wird – frisch gerollt.":"What gets ordered most at the counter – freshly rolled.","Jedes Gericht hat eine Nummer – für Bestellungen am Telefon genügt sie.":"Every dish has a number – that’s all you need to order by phone.","Suchen: Gelbschwanz, Tofu, Udon, 246 …":"Search: yellowtail, tofu, udon, 246 …","Vegetarisch":"Vegetarian","Gekocht":"Cooked","Pikant":"Spicy","Abgeflämmt":"Flamed","Knusprig":"Crispy","Nichts Rohes: gekocht, abgeflämmt oder frittiert":"Nothing raw: cooked, flamed or fried","Nichts Rohes":"Nothing raw","VEG":"VEG","PIKANT":"SPICY","FLAMME":"FLAMED","KNUSPRIG":"CRISPY","Grosse Rollen":"Big rolls","Inside-Out":"Inside-out","Tempura-Rollen":"Tempura rolls","Kleine Teller & Bao":"Small plates & bao","Nudelsuppen":"Noodle soups","Die Platte":"The platter","für den Abend":"for the evening","in drei Schritten geplant":"planned in three steps","Sagen Sie uns, wie viele kommen, wie gross der Appetit ist und was Sie mögen – Auswahl und Preis stehen gleich daneben. Bestellt wird per Telefon.":"Tell us how many are coming, how hungry you are and what you like – the selection and price appear right next to it. Orders are taken by phone.","Gäste":"Guests","Appetit":"Appetite","Geschmack":"Taste","Ihre Auswahl":"Your selection","Leicht":"Light","Mittel":"Medium","Hungrig":"Hungry","Bunt":"Mixed","Ohne Fisch":"No fish","Treffen Sie oben Ihre Wahl – die Liste erscheint hier.":"Make your choice above – the list appears here.","Platte am Telefon bestellen":"Order the platter by phone","Auswahl kopieren":"Copy selection","Die Theke":"The counter","Ein Glas vorab oder zum Ausklang des Abends.":"A glass to start or to round off the evening.","Hausgemacht":"House-made","Sake Drinks":"Sake Drinks","Sake aus dem Haus":"House sake","Bier & Schaumwein":"Beer & sparkling","Japan · 4,9 % · 5 dl":"Japan · 4.9% · 50 cl","Stimmen":"Voices","unserer Gäste":"of our guests","Unsere":"Our","Preise in CHF, Mehrwertsteuer inbegriffen.":"Prices in CHF, VAT included.","Unverträglichkeiten? Sagen Sie es uns bei der Bestellung.":"Intolerances? Let us know when you order.","Lachs abgeflämmt, mit Yuzu-Mayo · 2 Stück":"Flamed salmon with yuzu mayo · 2 pieces","Knusper-Crevette, oben Thunfisch und Sriracha · 8 Stück":"Crispy prawn, topped with tuna and sriracha · 8 pieces","Knusper-Crevette unter Avocado · 8 Stück":"Crispy prawn under avocado · 8 pieces","Lachs im Tempurateig, Frischkäse · 6 Stück":"Salmon in tempura batter, cream cheese · 6 pieces","Cremige Schweinebrühe, Chashu, Ei und Mais":"Creamy pork broth, chashu, egg and corn","Schweinebauch mit Hoisin im Dampfbrötchen":"Pork belly with hoisin in a steamed bun","Drei Fische, fünfzehn Scheiben":"Three fish, fifteen slices","Sechs angebratene Teigtaschen, Ponzu-Dip":"Six pan-fried dumplings, ponzu dip","Grüne Sojabohnen mit Yuzu-Salz":"Green soybeans with yuzu salt","Teile":"pieces","je Gast":"per guest","CHF":"CHF","≈ CHF":"≈ CHF","Nigiri und Rollen neben einer schlanken Lampe, grüner Tee":"Nigiri and rolls next to a slim lamp, green tea","Gemischte Platte für vier, Blick von oben":"Mixed platter for four, from above","Kleine Rollen mit Thunfisch und Gurke":"Small rolls with tuna and cucumber","Lange Holztheke mit Sakeflaschen":"Long wooden counter with sake bottles","Unser Lokal liegt an der":"Our restaurant is on",", ein paar Schritte von der Reuss. Dunkles Holz, weiche Bänke und warmes Licht über jedem Tisch.":", a few steps from the Reuss. Dark wood, soft banquettes and warm light over every table.","Sake-Drinks aus dem Haus, passend zu Sushi – und ein helles Lager aus Luzern.":"House sake drinks that suit sushi – plus a pale lager from Lucerne."
   };
   const ING={"Geflämmter Gelbschwanz":"flamed yellowtail","Ponzu":"ponzu","Süsser Tofu":"sweet tofu","Yuzu-Mayo":"yuzu mayo","Shiso":"shiso","Gelbschwanz":"yellowtail","Natto":"natto","Tamago":"tamago","Shiitake":"shiitake","Spinat":"spinach","Hähnchen":"chicken","Jakobsmuschel":"scallop","Edamame-Creme":"edamame cream","Süsskartoffel in Tempura":"tempura sweet potato","Hähnchen in Panko":"panko chicken","Kokosflocken":"coconut flakes","Thunfisch in Tempura":"tempura tuna","15 Stück":"15 pieces","6 Teigtaschen":"6 dumplings","Schwein":"pork","Ponzu-Dip":"ponzu dip","Gemüse":"vegetables","in der Schote":"in the pod","Yuzu-Salz":"yuzu salt","Chili":"chilli","Knoblauch":"garlic","Tofu in Tempura":"tempura tofu","Dashi":"dashi","Hähnchen in Tempura":"tempura chicken","Zitrone":"lemon","Schweinebauch":"pork belly","Hoisin":"hoisin","Crevette in Panko":"panko prawn","Kohl":"cabbage","Schweinebrühe":"pork broth","Mais":"corn","Misobrühe":"miso broth","Gemüsebrühe":"vegetable broth",
 "1 Stück":"1 piece","5 Stück":"5 pieces","5 Calamari":"5 calamari","5 Crevetten":"5 prawns","8 Teigtaschen":"8 dumplings","Aal in Tempura":"tempura eel","Ajitama-Ei":"ajitama egg",
