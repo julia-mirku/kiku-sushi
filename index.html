@@ -701,6 +701,13 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
    radial-gradient(circle at 0 100%,transparent 12px,rgba(232,207,143,.24) 13px,transparent 14px) 0 0/28px 14px,
    radial-gradient(circle at 14px 100%,transparent 12px,rgba(232,207,143,.24) 13px,transparent 14px) 0 7px/28px 14px,
    linear-gradient(115deg,#0f2a1d 0%,#1d4a34 36%,#2c5a3c 50%,#8a6a2c 74%,#d8b866 100%) 55% 0/280% 100%}
+
+#karte{scroll-margin-top:calc(var(--hdr) - 52px)}
+
+.hdr .brand, .hdr .brand *, .hdr .addr, .hdr .addr *{text-shadow:0 1px 8px rgba(0,0,0,.8),0 0 2px rgba(0,0,0,.6)}
+
+.sheet .row{grid-template-columns:58px 1fr auto}.sheet .rn{white-space:nowrap}
+@media (max-width:760px){.sheet .row{grid-template-columns:52px 1fr auto}}
 .kl{width:100%;height:100%;display:block}.pre .kl.big{width:min(46vw,230px);height:auto;filter:drop-shadow(0 0 22px rgba(255,200,97,.35))}.sleeve .band .kl{width:46px;height:46px}
 .post .txt{max-width:660px}.post h1{font-size:clamp(44px,min(5.8vw,10vh),92px)}
 .hero{--lx:9.5%;--ly:15%;--px:0%}@media (max-width:760px), (orientation:portrait) and (max-width:1100px){.hero{--lx:18%;--ly:31%;--px:16%}}
@@ -715,7 +722,7 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
     <a class="logo" href="#top" aria-label="Kiku – nach oben"><svg class="kl" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="55" fill="none" stroke="#fff" stroke-width="4"/><text x="60" y="74" text-anchor="middle" fill="#fff" style="font:italic 500 40px var(--serif)">Kiku</text></svg></a>
     <a class="addr" href="#besuch"><b>Lindengasse 9</b>6004 Luzern</a>
     <nav aria-label="Hauptmenü">
-      <a href="#lieblinge">Lieblinge</a><a href="#karte">Karte</a><a href="#platte">Platten</a><a href="#salon">Salon</a><a href="#bar">Bar</a>
+      <a href="#lieblinge">Favoriten</a><a href="#karte">Speisekarte</a><a href="#platte">Platten</a><a href="#salon">Lokal</a><a href="#bar">Bar</a>
     </nav>
     <div class="lang" role="group" aria-label="Sprache / Language"><button type="button" data-l="de" aria-pressed="true" lang="de">DE</button><button type="button" data-l="en" aria-pressed="false" lang="en">EN</button></div>
     <a class="btn btn-lamp tel" href="tel:+41410000000" aria-label="Anrufen: 041 000 00 00"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg><span>041 000 00 00</span></a>
@@ -728,7 +735,7 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
   <picture>
     <source media="(orientation:portrait) and (min-width:761px) and (max-width:1100px)" srcset="img/hero_hoch_1200.jpg">
     <source media="(max-width:760px)" srcset="img/s/hero_hoch_m.jpg">
-    <img class="photo" src="img/s/hero_quer_1600.jpg" srcset="img/s/hero_quer_1600.jpg 1600w, img/s/hero_quer_2400.jpg 2400w" width="1600" height="893" sizes="100vw" alt="Sushi-Platte auf Schiefer im warmen Licht einer Tischlampe bei Kiku" fetchpriority="high">
+    <img class="photo" src="img/s/hero_quer_1600.jpg" srcset="img/s/hero_quer_1600.jpg 1600w, img/s/hero_quer_2400.jpg 2400w" width="1600" height="893" sizes="100vw" alt="Nigiri und Rollen neben einer schlanken Lampe, grüner Tee" fetchpriority="high">
   </picture>
   <div class="warm"></div>
   <div class="dark"></div>
@@ -742,7 +749,7 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
     <div class="wrap">
       <div class="txt">
         <h1>Frisch gerollt.<i>Warm empfangen.</i></h1>
-        <p>Frisches Sushi, Ramen und Sake-Cocktails in unserem Salon an der Lindengasse 9 – mitten in der Luzerner Altstadt.</p>
+        <p>Sushi vom Brett, Ramen aus dem Topf und Sake-Drinks – an der Lindengasse 9 in der Luzerner Altstadt.</p>
         <div class="btns">
           <a class="btn btn-lamp" href="tel:+41410000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Tisch reservieren</a>
           <a class="btn btn-line" href="#karte">Zur Karte</a>
@@ -757,7 +764,7 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
   <div class="wrap">
     <div class="head reveal">
       <h2>Unsere <i>Lieblinge</i></h2>
-      <p class="lead">Auf schwarzem Schiefer serviert – mit den Nummern unserer Küche.</p>
+      <p class="lead">Was am Tresen am häufigsten bestellt wird – frisch gerollt.</p>
     </div>
     <div class="sidewrap"><div class="dishes" id="dishes"></div><button class="arrow ga sa-prev" id="dPrev" type="button" aria-label="Vorherige Gerichte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 18-6-6 6-6"/></svg></button><button class="arrow ga sa-next" id="dNext" type="button" aria-label="Weitere Gerichte"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m9 18 6-6-6-6"/></svg></button></div>
     <div class="dnav"><span class="ddots" id="ddots" aria-hidden="true"></span></div>
@@ -768,62 +775,60 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
 <section class="karte" id="karte">
   <div class="wrap">
     <div class="khead">
-      <h2>Die <i>Karte</i></h2>
-      <p class="sub">Mit unseren Küchennummern – am Telefon einfach «Nr. 73» sagen.</p>
-      <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Suchen: Lachs, Avocado, Ramen, 73 …" autocomplete="off" aria-label="Karte durchsuchen"></label>
+      <h2>Unsere <i>Speisekarte</i></h2>
+      <p class="sub">Jedes Gericht hat eine Nummer – für Bestellungen am Telefon genügt sie.</p>
+      <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Suchen: Gelbschwanz, Tofu, Udon, 246 …" autocomplete="off" aria-label="Karte durchsuchen"></label>
     </div>
     <div class="filters kfilters" id="filters">
-      <button class="f" data-f="v" aria-pressed="false">Vegi</button>
-      <button class="f" data-f="nr" aria-pressed="false" title="Fisch &amp; Meeresfrüchte gegart, flambiert oder frittiert">Gegart</button>
-      <button class="f" data-f="s" aria-pressed="false">Scharf</button>
-      <button class="f" data-f="fl" aria-pressed="false">Geflämmt</button>
-      <button class="f" data-f="t" aria-pressed="false">Tempura</button>
+      <button class="f" data-f="v" aria-pressed="false">Vegetarisch</button>
+      <button class="f" data-f="nr" aria-pressed="false" title="Nichts Rohes: gekocht, abgeflämmt oder frittiert">Gekocht</button>
+      <button class="f" data-f="s" aria-pressed="false">Pikant</button>
+      <button class="f" data-f="fl" aria-pressed="false">Abgeflämmt</button>
+      <button class="f" data-f="t" aria-pressed="false">Knusprig</button>
     </div>
     <div class="noren" id="tabs" role="tablist"></div>
     <div class="sidewrap"><div class="board2" id="board"><div class="bhead"><span class="stripe"></span><h3 id="bt"></h3><small id="bu"></small><span class="pg" id="pg"></span></div><div class="sheetwrap" id="sw"><div class="sheet" id="sheet"></div></div><div class="bnav"><button type="button" id="prev" aria-label="Vorherige Seite"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m15 18-6-6 6-6"/></svg>Zurück</button><span class="dots" id="dots"></span><button type="button" id="next" aria-label="Nächste Seite"><span id="nxl">Weiter</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m9 18 6-6-6-6"/></svg></button></div></div><button class="arrow ga sa-prev" id="kPrev" type="button" aria-label="Vorherige Seite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 18-6-6 6-6"/></svg></button><button class="arrow ga sa-next" id="kNext" type="button" aria-label="Nächste Seite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m9 18 6-6-6-6"/></svg></button></div>
-    <div class="knote"><span>Alle Preise in Fr. inkl. 8,1 % MwSt.</span><span>Lachs: Norwegen (Zucht) · Thunfisch: Atlantik (Wildfang) · Aal: Japan (Zucht)</span><span>Allergien? Bitte beim Bestellen sagen.</span></div>
+    <div class="knote"><span>Preise in CHF, Mehrwertsteuer inbegriffen.</span><span>Lachs: Norwegen (Zucht) · Thunfisch: Atlantik (Wildfang) · Aal: Japan (Zucht)</span><span>Unverträglichkeiten? Sagen Sie es uns bei der Bestellung.</span></div>
   </div>
 </section>
 
 
 <section class="plan" id="platte">
   <div class="wrap">
-    <h2 class="reveal">Sushi-Platte für <i>Ihre Gruppe</i><span class="h2sub">in 10 Sekunden zusammengestellt</span></h2>
-    <p class="lead reveal" style="margin-top:14px">Wählen Sie Personen, Hunger und Stil – wir zeigen sofort, was auf die Platte kommt und was es kostet. Dann einfach anrufen und bestellen.</p>
-    <ol class="steps reveal" id="pSteps" aria-label="So funktioniert es"><li data-s="1"><b>1</b>Personen</li><li data-s="2"><b>2</b>Hunger</li><li data-s="3"><b>3</b>Stil</li><li data-s="4" class="goal"><b>✓</b>Ihre Platte</li></ol>
+    <h2 class="reveal">Die Platte <i>für den Abend</i><span class="h2sub">in drei Schritten geplant</span></h2>
+    <p class="lead reveal" style="margin-top:14px">Sagen Sie uns, wie viele kommen, wie gross der Appetit ist und was Sie mögen – Auswahl und Preis stehen gleich daneben. Bestellt wird per Telefon.</p>
+    <ol class="steps reveal" id="pSteps" aria-label="So funktioniert es"><li data-s="1"><b>1</b>Gäste</li><li data-s="2"><b>2</b>Appetit</li><li data-s="3"><b>3</b>Geschmack</li><li data-s="4" class="goal"><b>✓</b>Ihre Auswahl</li></ol>
     <div class="grid">
       <div class="lcol">
-        <div class="pers"><span class="lb"><b class="no">1</b>Personen</span>
+        <div class="pers"><span class="lb"><b class="no">1</b>Gäste</span>
           <div class="stepper"><button type="button" id="pm" aria-label="Eine Person weniger">−</button><output id="pers">4 Personen</output><button type="button" id="pp" aria-label="Eine Person mehr">+</button></div>
         </div>
         <div class="pic reveal">
-        <img src="img/s/platte_4_personen.jpg" srcset="img/s/platte_4_personen_m.jpg 760w, img/s/platte_4_personen.jpg 1100w" sizes="(max-width:900px) 100vw, 50vw" width="1100" height="821" alt="Grosse Sushi-Platte auf Schiefer, von oben" loading="lazy" decoding="async">
-        <div class="tot" id="pTot"><span class="pill"><b id="tStk">0</b> Stück</span><span class="pill">Fr. <b id="tFr">0</b></span><span class="pill">≈ Fr. <b id="tPP">0</b> pro Person</span></div>
+        <img src="img/s/platte_4_personen.jpg" srcset="img/s/platte_4_personen_m.jpg 760w, img/s/platte_4_personen.jpg 1100w" sizes="(max-width:900px) 100vw, 50vw" width="1100" height="821" alt="Gemischte Platte für vier, Blick von oben" loading="lazy" decoding="async">
+        <div class="tot" id="pTot"><span class="pill"><b id="tStk">0</b> Teile</span><span class="pill">CHF <b id="tFr">0</b></span><span class="pill">≈ CHF <b id="tPP">0</b> je Gast</span></div>
       </div>
       </div>
       <div class="ctrl reveal">
-        <div><span class="lb"><b class="no">2</b>Hunger</span>
+        <div><span class="lb"><b class="no">2</b>Appetit</span>
           <div class="seg one" id="hunger">
-            <button data-v="10" aria-pressed="false">Klein<small>≈ 10 Stück p. P.</small></button>
-            <button data-v="14" aria-pressed="false">Normal<small>≈ 14 Stück p. P.</small></button>
-            <button data-v="18" aria-pressed="false">Gross<small>≈ 18 Stück p. P.</small></button>
+            <button data-v="9" aria-pressed="false">Leicht<small>≈ 9 Stück p. P.</small></button>
+            <button data-v="13" aria-pressed="false">Mittel<small>≈ 13 Stück p. P.</small></button>
+            <button data-v="17" aria-pressed="false">Hungrig<small>≈ 17 Stück p. P.</small></button>
           </div>
         </div>
-        <div><span class="lb"><b class="no">3</b>Stil</span>
+        <div><span class="lb"><b class="no">3</b>Geschmack</span>
           <div class="seg one" id="stil">
-            <button data-v="mix" aria-pressed="false">Gemischt</button>
-            <button data-v="crunchy" aria-pressed="false">Crunchy</button>
-            <button data-v="vegi" aria-pressed="false">Vegi</button>
-            <button data-v="cooked" aria-pressed="false" title="Fisch &amp; Meeresfrüchte gegart, flambiert oder frittiert">Gegart</button>
+            <button data-v="mix" aria-pressed="false">Bunt</button>
+            <button data-v="crunchy" aria-pressed="false">Knusprig</button>
+            <button data-v="vegi" aria-pressed="false">Ohne Fisch</button>
+            <button data-v="cooked" aria-pressed="false" title="Nichts Rohes">Gekocht</button>
           </div>
         </div>
-        <div class="board empty" id="pBoard"><p class="wait" id="bWait"><svg viewBox="0 0 64 40" aria-hidden="true"><ellipse cx="32" cy="22" rx="29" ry="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 4"/><path d="M32 2v10M27 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Wählen Sie oben – die Platte füllt sich.</p><ol id="boardList"></ol><div class="sum"><span>Ihre Platte</span><span>Fr. <span id="bFr">0</span></span></div></div>
+        <div class="board empty" id="pBoard"><p class="wait" id="bWait"><svg viewBox="0 0 64 40" aria-hidden="true"><ellipse cx="32" cy="22" rx="29" ry="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 4"/><path d="M32 2v10M27 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Treffen Sie oben Ihre Wahl – die Liste erscheint hier.</p><ol id="boardList"></ol><div class="sum"><span>Ihre Platte</span><span>Fr. <span id="bFr">0</span></span></div></div>
         <div class="act">
-          <a class="btn btn-lamp" id="pOrder" href="tel:+41410000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>Diese Platte telefonisch bestellen</a>
-          <button class="btn btn-line" type="button" id="copy">Liste kopieren</button>
+          <a class="btn btn-lamp" id="pOrder" href="tel:+41410000000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>Platte am Telefon bestellen</a>
+          <button class="btn btn-line" type="button" id="copy">Auswahl kopieren</button>
         </div>
-        
-        <aside class="muster" data-muster><span>Musterentwurf · Hinweis für Kiku</span>Gäste stellen ihre Platte selbst zusammen und rufen mit fertiger Bestellung an – weniger Rückfragen am Telefon.</aside>
 
       </div>
     </div>
@@ -834,12 +839,12 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
 <section class="salon" id="salon">
   <div class="wrap">
     <h2 class="reveal">Der Salon an der <i>Lindengasse</i></h2>
-    <p class="moved reveal" id="moved">Sie finden uns an der <a class="addr-u" href="https://www.google.com/maps/search/?api=1&amp;query=Luzern+Altstadt" target="_blank" rel="noopener">Lindengasse 9</a>, mitten in der Altstadt. Dunkles Holz, weiche Bänke und warmes Licht über jedem Tisch.</p>
+    <p class="moved reveal" id="moved">Unser Lokal liegt an der <a class="addr-u" href="https://www.google.com/maps/search/?api=1&amp;query=Luzern+Altstadt" target="_blank" rel="noopener">Lindengasse 9</a>, ein paar Schritte von der Reuss. Dunkles Holz, weiche Bänke und warmes Licht über jedem Tisch.</p>
     <div class="wall">
       <figure class="frame f1 reveal"><span class="lamp"></span><div class="mat"><img src="img/s/salon_quer.jpg" srcset="img/s/salon_quer_m.jpg 900w, img/s/salon_quer.jpg 1500w" sizes="(max-width:760px) 100vw, 1180px" width="1500" height="837" alt="Der Salon am Abend: weiche Bänke und warmes Licht" loading="lazy" decoding="async" style="aspect-ratio:16/8.4"><span class="lit"></span></div></figure>
       <figure class="frame reveal"><span class="lamp"></span><div class="mat"><img src="img/s/salon_hoch.jpg" srcset="img/s/salon_hoch_m.jpg 720w, img/s/salon_hoch.jpg 900w" sizes="(max-width:760px) 100vw, 580px" width="900" height="1125" alt="Der lange Salon mit Tischlampen" loading="lazy" decoding="async" style="aspect-ratio:4/5"><span class="lit"></span></div></figure>
       <div class="stack">
-        <figure class="frame reveal"><span class="lamp"></span><div class="mat"><img src="img/s/hosomaki.jpg" width="700" height="700" alt="Hosomaki mit Lachs und Gurke auf Schiefer" loading="lazy" decoding="async"><span class="lit"></span></div></figure>
+        <figure class="frame reveal"><span class="lamp"></span><div class="mat"><img src="img/s/hosomaki.jpg" width="700" height="700" alt="Kleine Rollen mit Thunfisch und Gurke" loading="lazy" decoding="async"><span class="lit"></span></div></figure>
       </div>
     </div>
     <div class="wdots" id="wdots" aria-hidden="true"></div>
@@ -849,23 +854,23 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
 
 <section class="bar" id="bar">
   <div class="wrap">
-    <p class="neon-kick">Signature</p>
-    <h2 class="neon" id="neon">Sake Cocktails</h2>
+    <p class="neon-kick">Hausgemacht</p>
+    <h2 class="neon" id="neon">Sake Drinks</h2>
     <p class="lead reveal">Sake-Drinks aus dem Haus, passend zu Sushi – und ein helles Lager aus Luzern.</p>
     <div class="drinks">
-      <article class="drink big reveal"><img src="img/s/bar_neon.jpg" srcset="img/s/bar_neon_m.jpg 720w, img/s/bar_neon.jpg 900w" sizes="(max-width:900px) 100vw, 460px" width="900" height="1125" alt="Die Bar im Neonlicht" loading="lazy" decoding="async"><div class="cap"><h3>Die Bar</h3><p>Aperitif vor dem Sushi oder der letzte Drink um elf.</p></div></article>
+      <article class="drink big reveal"><img src="img/s/bar_neon.jpg" srcset="img/s/bar_neon_m.jpg 720w, img/s/bar_neon.jpg 900w" sizes="(max-width:900px) 100vw, 460px" width="900" height="1125" alt="Lange Holztheke mit Sakeflaschen" loading="lazy" decoding="async"><div class="cap"><h3>Die Theke</h3><p>Ein Glas vorab oder zum Ausklang des Abends.</p></div></article>
       <article class="drink reveal"><span class="pr">Fr. 16</span><img src="img/s/yuzu_sakura.jpg" width="700" height="700" alt="Cocktail Shiso Spritz" loading="lazy" decoding="async"><div class="cap"><h3>Shiso Spritz</h3><p>Sake, Shiso, Grapefruit, Soda – kräuterig &amp; leicht</p></div></article>
       <article class="drink reveal"><span class="pr">Fr. 16</span><img src="img/s/matcha_sour.jpg" width="700" height="700" alt="Cocktail Sencha Sour" loading="lazy" decoding="async"><div class="cap"><h3>Sencha Sour</h3><p>Sake, Sencha-Sirup, Limette – herb &amp; cremig</p></div></article>
     </div>
     <div class="drinks two">
-      <div class="list reveal"><h3>Signature Sake</h3>
+      <div class="list reveal"><h3>Sake aus dem Haus</h3>
         <div class="li"><span>Lychee Highball<small>Sake, Litschi, Soda, Minze</small></span><b>Fr. 15</b></div>
         <div class="li"><span>Ginger Sake Mule<small>Sake, Ingwer, Limette, Ginger Beer</small></span><b>Fr. 15</b></div>
         <div class="li"><span>Junmai Sake<small>warm oder kalt · 4 cl</small></span><b>Fr. 7</b></div>
       </div>
-      <div class="list reveal"><h3>Bier &amp; Bläschen</h3>
+      <div class="list reveal"><h3>Bier &amp; Schaumwein</h3>
         <div class="li"><span>Kiku Lager<small>Luzern · 4,8 % · 3,3 dl</small></span><b>Fr. 6.50</b></div>
-        <div class="li"><span>Kirin Ichiban<small>Japan · 5,0 % · 3,3 dl</small></span><b>Fr. 6.50</b></div>
+        <div class="li"><span>Kirin Ichiban<small>Japan · 4,9 % · 5 dl</small></span><b>Fr. 6.50</b></div>
         <div class="li"><span>Champagner Brut<small>7,5 dl</small></span><b>Fr. 95</b></div>
       </div>
     </div>
@@ -876,7 +881,7 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
 <section class="rev" id="stimmen">
   <div class="wrap">
     <div class="top reveal">
-      <h2>Was unsere Gäste <i>sagen</i></h2>
+      <h2>Stimmen <i>unserer Gäste</i></h2>
       <a class="score" href="#stimmen"><b>4,7</b><span><span class="stars">★★★★</span><span class="stars" style="opacity:.3">★</span><br>184 Bewertungen</span></a>
     </div>
     <div class="sidewrap"><div class="sleeves" id="sleeves"></div><button class="arrow ga sa-prev" id="rPrev" aria-label="Vorherige Bewertung"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m15 18-6-6 6-6"/></svg></button><button class="arrow ga sa-next" id="rNext" aria-label="Nächste Bewertung"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m9 18 6-6-6-6"/></svg></button></div>
@@ -914,79 +919,63 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
   <div class="wrap fbot"><span>Musterentwurf · fiktive Angaben</span><span class="by">Website: <a href="https://webstudio-mirku.ch" target="_blank" rel="noopener">Julia &amp; Robin Mirku</a></span></div>
 </footer>
 
-<nav class="dock" id="dock" aria-label="Schnellzugriff"><a href="#karte">Karte</a><a href="#platte">Platte</a><a href="#salon">Salon</a><a href="#bar">Bar</a></nav>
+<nav class="dock" id="dock" aria-label="Schnellzugriff"><a href="#karte">Speisekarte</a><a href="#platte">Platten</a><a href="#salon">Lokal</a><a href="#bar">Bar</a></nav>
 
 <script>
 
 // [nr, name, beschreibung, preis, tags] tags: v=vegi r=sashimi-qualität s=scharf fl=geflämmt/gegrillt t=tempura
 const KARTE=[
  {id:"nigiri",t:"Nigiri",u:"2 Stück",items:[
-  [3,"Sake – Lachs","",8,"r"],[4,"Maguro – Thunfisch","",9,"r"],[7,"Ebi – Crevette","",8,""],
-  [8,"Unagi","Gegrillter Aal – Teriyaki – Sesam",10,"fl"],[9,"Sake Yaki","Geflämmter Lachs – Avocado – Teriyaki – Sesam",10,"fl"],
-  [10,"Maguro Yaki","Geflämmter Thunfisch – Spicy Mayo – Tobiko",10,"fl s"],[11,"Ika Ten","Kalmar in Tempura – Spicy Mayo – Lauch",10,"t s"],
-  [12,"Maguro Yaki Trüffel","Geflämmter Thunfisch – Trüffel-Mayo – Trüffel",12,"fl"]]},
- {id:"maki",t:"Hosomaki",u:"8 Stück",items:[
-  [14,"Gurken Maki","",8,"v"],[15,"Avocado Maki","",8,"v"],[16,"Rettich Maki","",8,"v"],[17,"Kürbis Maki","",8,"v"],
-  [19,"Surimi Maki","",8,""],[20,"Lachs Maki","",9,"r"],[21,"Thunfisch Maki","",9,"r"],[24,"Crevetten Maki","",9,""],
-  [76,"Hoso Tempura Avocado","Crunchy Maki in Tempura",12,"v t"],[77,"Hoso Tempura Gurke","Crunchy Maki in Tempura",12,"v t"],
-  [78,"Hoso Tempura Rettich","Crunchy Maki in Tempura",12,"v t"],[79,"Hoso Tempura Kürbis","Crunchy Maki in Tempura",12,"v t"]]},
- {id:"futo",t:"Futomaki",u:"6 Stück",items:[
-  [25,"Vegi Futomaki","Gurke – Avocado – Rettich – Kürbis",16,"v"],[26,"Lachs Futomaki","Lachs – Gurke – Avocado",17,"r"],
-  [28,"Thunfisch Futomaki","Thunfisch – Gurke – eingelegter Rettich – eingelegtes Gemüse – Sesam",18,"r"],[29,"Ebi Futomaki","Crevette – Gurke – Avocado – Sesam – Mayonnaise – Kürbis",17,""],
-  [31,"Yasai Philadelphia","Frischkäse – Gurke – Avocado – Kanpyo – Mango",18,"v"],[33,"Lachs Philadelphia","Lachs – Frischkäse – Gurke – Avocado – Kürbis – Mango",20,"r"],
-  [34,"Thunfisch Philadelphia","Thunfisch – Frischkäse – Gurke – eingelegtes Gemüse – Sesam",22,"r"],[35,"Thunfisch Tataki","Geflämmter Thunfisch mit Togarashi – Avocado – Gurke – eingelegter Rettich",22,"fl s"],
-  [36,"Rainbow","Lachs – Thunfisch – Crevette – Tobiko – Gurke",22,"r"],[37,"Sweet Lachs","Lachs – Mango – Avocado – eingelegter Kürbis – Frischkäse – Teriyaki – Sesam",20,"r"],
-  [38,"Lachs Citrus","Lachs mariniert in Ponzu – Gurke – eingelegter Rettich",20,"r"],[39,"Lachs Spicy Futo","Lachs – Jalapeños – Mango – eingelegter Rettich – Gurke",19,"r s"],
-  [40,"Lachs Special Futo","Lachs – Gurke – eingelegter Rettich – Spicy Mayo – Tobiko – Avocado",20,"r s"],[41,"Tuna Sweet and Spicy","Thunfisch – Surimi – Frischkäse – eingelegter Kürbis – Gurke – Jalapeños – Teriyaki – Sesam",22,"r s"],
-  [42,"Tuna Spicy Futo","Thunfisch – eingelegtes Gemüse – Jalapeños – Gurke – Rettich – Sesam – Spicy Mayo – Tobiko",21,"r s"],[43,"Lachs Tatar Special","Lachstatar – eingelegter Rettich – Avocado",22,"r"],
-  [44,"Tunamusse Special","Tunamusse – Spicy Mayo – eingelegter Rettich – Gurke – Avocado – Lauch",20,"r s"],
-  [45,"Gemüse Crispy Tempura","Paprika – Karotten – Lauch – Zucchini in Tempurateig",18,"v t"],[46,"Futo Sake Yaki","Gegrillter Lachs – Gurke – Kürbis – Avocado – Teriyaki – Sesam",19,"fl"],
-  [47,"Sake Spicy Yaki","Gegrillter Lachs – Gurke – Rettich – Jalapeños – Frischkäse – Sriracha",19,"fl s"],[48,"Sake Ten","Lachs in Tempura – Rettich – Gurke – Spicy Mayo – Lauch",20,"t s"],
-  [49,"Ebi Ten","Crevette in Tempura – Rettich – Lauch – Gurke – Spicy Mayo – Sesam",20,"t s"],[50,"Ebi Sweet Cream","Crevette in Tempura – Avocado – Gurke – Frischkäse – Teriyaki – Sesam",20,"t"],
-  [51,"Ika Ten","Kalmar in Tempura – Mango – Rettich – Gurke – Spicy Mayo – Sesam – Lauch",19,"t s"],[52,"Unagi Kabayaki","Gegrillter Aal – Gurke – Avocado – Kürbis – Teriyaki – Sesam",22,"fl"],
-  [53,"Futo Ebi Ten Trüffel","Crevette in Tempura – Gurke – eingelegtes Gemüse – Trüffel-Mayo – Sesam",22,"t"]]},
- {id:"ura",t:"Uramaki",u:"8 Stück",items:[
-  [54,"Vegi Uramaki","Avocado – Gurke – Kürbis – Rettich – Sesam",18,"v"],[55,"California Uramaki","Surimi – Avocado – Gurke – Mayonnaise – Sesam",19,""],
-  [56,"Sake Uramaki","Lachs – Gurke – Avocado – Mayonnaise – Sesam",20,"r"],[57,"Ebi Ten Uramaki","Crevette in Tempura – Avocado – Lauch – Mayonnaise – Sesam – Teriyaki",24,"t"],
-  [58,"Maguro Uramaki","Thunfisch – Gurke – Spicy Mayo – Rettich – Sesam",22,"r s"],[60,"Sake Spicy Uramaki","Lachs – Rettich – eingelegtes Gemüse – Gurke – Sriracha – Sesam",21,"r s"],
-  [61,"Maguro Spicy Uramaki","Thunfisch – eingelegtes Gemüse – Rettich – Sriracha – Tobiko – Sesam",23,"r s"],[62,"Ebi Uramaki","Crevette – Gurke – eingelegter Kürbis – Avocado – Mayonnaise – Sesam",22,""],
-  [63,"Yasai Caterpillar","Avocado in Tempura – Gurke – Rettich – Mayonnaise – aussen Avocado – Teriyaki – Sesam",28,"v t"],[64,"Citrus Lachs","Crevette in Tempura – Gurke – Avocado – Mango – aussen Lachs in Ponzu – Sesam",32,"r t"],
-  [65,"Dragon Tempura","Lachs – Avocado – Kanpyo – Mayonnaise – aussen Aal in Tempura – Teriyaki – Schnittlauch – Sesam",34,"r t"],[66,"Tuna Tataki","Crevette in Tempura – Gurke – Rettich – Fuku Jin Zuke – aussen geflämmter Thunfisch mit Togarashi – Gochujang-Mayo",34,"fl t s"],
-  [67,"Ebi Ten Special","Crevette in Tempura – Gurke – Lauch – Rettich – Spicy Mayo – aussen Tobiko – Sesam",32,"t s"],[68,"Red Dragon Trüffel","Crevette in Tempura – Gurke – Fuku Jin Zuke – aussen Thunfisch, Trüffel-Mayo, Trüffel",36,"r t"],
-  [69,"Ebi Cream Uramaki","Crevette in Tempura – Gurke – Avocado – aussen Sojabohnenflocke – Frischkäse – Teriyaki – Sesam",34,"t"],[70,"Avocado Sake Yaki","Avocado in Tempura – Gurke – Avocado – Mayonnaise – aussen geflämmter Lachs – Teriyaki – Sesam",32,"fl t"],
-  [71,"Dragon Roll","Crevette in Tempura – Gurke – Kanpyo – Avocado – aussen gegrillter Aal – Teriyaki – Sesam",35,"fl t"],[72,"Ebi Caterpillar","Crevette in Tempura – Oshinko – Mango – Gurke – Mayonnaise – aussen Avocado – Teriyaki – Sesam",32,"t"],
-  [73,"Red Dragon","Crevette in Tempura – Rettich – Mango – Jalapeños – Gurke – Sriracha – aussen Thunfisch – Tobiko – Sesam",35,"r t s"],[74,"Ebi Ten Rainbow","Crevette in Tempura – Gurke – Rettich – Spicy Mayo – aussen Lachs – Thunfisch – Crevette",34,"r t s"],
-  [75,"Ebi Sake Tatar","Crevette in Tempura – Gurke – Rettich – aussen Lachstatar – Spicy Mayo – Lauch",34,"r t s"]]},
- {id:"crunchy",t:"Crunchy Rollen",u:"6 Stück",items:[
-  [80,"Vegi Crunchy Tempura Rolle","Gurke – Avocado – Oshinko – Kanpyo – aussen Spicy Mayo – Lauch",20,"v t s"],[81,"Lachs Tatar Crunchy Rolle","Lachstatar in Tempura – aussen Spicy Mayo – Lauch",25,"t s"],
-  [82,"Thunfisch Tatar Crunchy Rolle","Thunfischtatar in Tempura – aussen Spicy Mayo – Lauch",25,"t s"],[83,"Tunamusse Crunchy Rolle","Tunamusse in Tempura – aussen Spicy Mayo – Lauch",22,"t s"]]},
- {id:"sashimi",t:"Sashimi",u:"4 Stück",items:[
-  [84,"Sashimi Thunfisch","",9,"r"],["","Sashimi Lachs","",9,"r"],["","Sashimi Aal","",10,"fl"],["","Sashimi Crevetten","",10,""]]},
- {id:"vor",t:"Vorspeisen & Bao",u:"",items:[
-  [85,"Gyoza","8 Teigtaschen, vegetarisch – mit Sweet-Soja- oder Sesam-Dip",12,"v"],[86,"Goma Wakame Salat","",7,"v"],[127,"Edamame","in der Schale mit Meersalz",7,"v"],
-  [87,"Sake Tatar","Lachstatar – Wakame – Goma Wakame – Toasts – Avocado",25,"r"],
-  ["","Crunchy Crevetten in Tempura","5 Crevetten – Home Style Fries mit Spicy Mayo, Trüffel-Mayo oder Sweet Chili",17,"t"],["","Crunchy Calamari in Tempura","5 Calamari – Home Style Fries mit Spicy Mayo, Trüffel-Mayo oder Sweet Chili",15,"t"],
-  [94,"Black Tiger Crevette","1 Stück",5,"t"],[95,"Black Tiger Crevetten","5 Stück",20,"t"],
-  ["","Bao Crispy Chicken Teriyaki","Leicht pikantes Crispy Chicken – Salat – Gurke – rote Zwiebeln – Koriander – Gochujang-Mayo",11,"s"],
-  ["","Bao Crispy Shrimp","Honig-Knoblauch-Crevette – Salat – marinierte Karotte – Sesam – Ingwer – Koriander – Wasabi-Mayo",11,""],
-  ["","Bao Crispy Salmon","Lachs – Avocado – eingelegte Gurken – Schnittlauch – Koriander – Mango-Sauce – Wasabi-Mayo",11,"r"],
-  ["","Bao Crispy Tofu","Gebratener Tofu – Haus-Dressing – rote Zwiebeln – eingelegte Gurken – Schnittlauch – Chili-Mayo",11,"v s"]]},
- {id:"ramen",t:"Ramen & Suppen",u:"",items:[
-  ["","Shoyu Ramen","Hühnerbrühe – Ramen-Nudeln – Chashu – Ajitama-Ei – Frühlingszwiebel – Nori – Narutomaki – Babymais – Sojasauce",24,""],
-  ["","Tantanmen Ramen","Hühnerbrühe – Ramen-Nudeln – Schweine- oder Rindfleisch – Menma – Pak Choi – Ajitama-Ei – Sojasprossen – Nüsse – Sesam – Chiliöl",24,"s"],
-  [90,"Miso Shiro","Wakame – Tofu – Zwiebel – Sesam",8,"v"],[91,"Miso no Sake","Wakame – Lachs – Zwiebel – Sesam",10,""],
-  [92,"Osuimono","Meeresfrüchte – Udon – Zwiebel – Erbsen – Sesamöl – Sesam",12,""],[93,"Kimchi Suppe","Kimchi – Rindfleisch – gebratene vegetarische Gyoza",12,"s"]]}
+  [201,"Shake – Lachs","",7,"r"],[202,"Hamachi – Gelbschwanz","",9,"r"],[203,"Hotate – Jakobsmuschel","",10,"r"],[204,"Tamago – Omelett","",6,"v"],
+  [205,"Aburi Shake","Geflämmter Lachs – Yuzu-Mayo – Schnittlauch",9,"fl"],[206,"Aburi Hamachi","Geflämmter Gelbschwanz – Jalapeños – Ponzu",10,"fl s"],[207,"Inari","Süsser Tofu – Sesam",6,"v"]]},
+ {id:"maki",t:"Maki",u:"6 Stück",items:[
+  [210,"Kappa Maki","Gurke – Sesam",7,"v"],[211,"Oshinko Maki","Oshinko",7,"v"],[212,"Avocado Shiso Maki","Avocado – Shiso",8,"v"],[213,"Kanpyo Maki","Kanpyo",7,"v"],
+  [214,"Shake Maki","Lachs",8,"r"],[215,"Tekka Maki","Thunfisch",9,"r"],[216,"Negihama Maki","Gelbschwanz – Frühlingszwiebel",9,"r"],[217,"Ebi Mayo Maki","Crevette – Mayonnaise",8,""],
+  [218,"Natto Maki","Natto – Frühlingszwiebel",7,"v"],[219,"Spicy Tuna Maki","Thunfisch – Sriracha",9,"r s"]]},
+ {id:"futo",t:"Grosse Rollen",u:"5 Stück",items:[
+  [220,"Kiku Futo","Tamago – Shiitake – Spinat – Kanpyo",15,"v"],[221,"Shake Shiso Futo","Lachs – Shiso – Avocado – Sesam",16,"r"],
+  [222,"Maguro Negi Futo","Thunfisch – Frühlingszwiebel – Sesam",17,"r"],[223,"Ebi Tamago Futo","Tamago – Crevette – Spinat – Mayonnaise",16,""],
+  [224,"Yasai Futo","Paprika – Spinat – Shiitake – Karotten – Sesam",14,"v"],[225,"Hamachi Yuzu Futo","Gelbschwanz – Yuzu-Mayo – Schnittlauch",18,"r"],
+  [226,"Shake Cream Futo","Spinat – Lachs – Frischkäse – Sesam",17,"r"],[227,"Tori Teriyaki Futo","Hähnchen – Teriyaki – Salat",16,""],
+  [228,"Kimchi Futo","Kimchi – Shiitake – Sesam",14,"v s"],[229,"Unagi Futo","Gegrillter Aal – Tamago – Teriyaki",19,"fl"],
+  [230,"Ebi Tempura Futo","Spinat – Crevette in Tempura – Yuzu-Mayo",18,"t"],[231,"Spicy Hotate Futo","Jakobsmuschel – Sriracha – Frühlingszwiebel",19,"r s"],
+  [232,"Tofu Teriyaki Futo","Gebratener Tofu – Teriyaki – Karotten",15,"v"],[233,"Aburi Shake Futo","Geflämmter Lachs – Ponzu – Sesam",18,"fl"]]},
+ {id:"ura",t:"Inside-Out",u:"8 Stück",items:[
+  [240,"Kiku Roll","Lachs – Shiso – Avocado – aussen Sesam",19,"r"],[241,"Spicy Hamachi Roll","Gelbschwanz – Sriracha – aussen Frühlingszwiebel",21,"r s"],
+  [242,"Green Garden","Spinat – Karotten – Avocado – aussen Edamame-Creme",17,"v"],[243,"Tempura Yasai Roll","Süsskartoffel in Tempura – Spinat – aussen Sesam",18,"v t"],
+  [244,"Ebi Avocado Roll","Avocado – Crevette – Yuzu-Mayo – aussen Tobiko",21,""],[245,"Philly Shake","Frischkäse – Lachs – Spinat – aussen Sesam",20,"r"],
+  [246,"Akai Roll","Crevette in Tempura – Shiso – aussen Thunfisch – Sriracha",30,"r t s"],[247,"Midori Roll","Crevette in Tempura – Shiso – aussen Avocado – Teriyaki",28,"t"],
+  [248,"Aburi Shake Roll","Avocado – Spinat – aussen geflämmter Lachs – Yuzu-Mayo",27,"fl"],[249,"Unagi Roll","Tamago – Shiso – aussen gegrillter Aal – Sesam",29,"fl"],
+  [250,"Hotate Roll","Jakobsmuschel – Shiso – aussen Tobiko – Spicy Mayo",28,"r s"],[251,"Tori Katsu Roll","Hähnchen in Panko – Salat – aussen Teriyaki",24,"t"],
+  [252,"Rainbow Kiku","Avocado – Shiso – aussen Lachs – Thunfisch – Gelbschwanz",30,"r"],[253,"Truffle Ebi Roll","Crevette in Tempura – Avocado – aussen Trüffel-Mayo",29,"t"],
+  [254,"Spicy Tofu Roll","Gebratener Tofu – Spinat – aussen Chili-Mayo",18,"v s"],[255,"Shake Mango Roll","Lachs – Mango – aussen Kokosflocken",22,"r"]]},
+ {id:"crunchy",t:"Tempura-Rollen",u:"6 Stück",items:[
+  [260,"Knusper Shake","Lachs in Tempura – Frischkäse – aussen Teriyaki",24,"t"],[261,"Knusper Maguro","Thunfisch in Tempura – Avocado – aussen Chili-Mayo",25,"t s"],
+  [262,"Knusper Yasai","Süsskartoffel in Tempura – Spinat – aussen Teriyaki",19,"v t"],[263,"Knusper Ebi","Shiso – Crevette in Tempura – aussen Yuzu-Mayo",23,"t"],
+  [264,"Knusper Tori","Hähnchen in Panko – Salat – aussen Teriyaki",21,"t"]]},
+ {id:"sashimi",t:"Sashimi",u:"5 Stück",items:[
+  [270,"Sashimi Shake","",11,"r"],[271,"Sashimi Maguro","",12,"r"],[272,"Sashimi Hamachi","",13,"r"],[273,"Sashimi Moriawase","15 Stück – Lachs, Thunfisch, Gelbschwanz",34,"r"]]},
+ {id:"vor",t:"Kleine Teller & Bao",u:"",items:[
+  [280,"Yaki Gyoza","6 Teigtaschen – Schwein – Ponzu-Dip",11,""],[281,"Yasai Gyoza","6 Teigtaschen – Gemüse – Chiliöl",10,"v s"],
+  [282,"Edamame Yuzu-Salz","in der Schote – Yuzu-Salz",7,"v"],[283,"Spicy Edamame","in der Schote – Chili – Knoblauch",8,"v s"],
+  [284,"Wakame Gurken-Salat","Wakame – Gurke – Ponzu",8,"v"],[285,"Agedashi Tofu","Tofu in Tempura – Dashi – Frühlingszwiebel",10,"v t"],
+  [286,"Karaage","Hähnchen in Tempura – Zitrone – Yuzu-Mayo",13,"t"],[287,"Bao Buta","Schweinebauch – Hoisin – Gurke – Frühlingszwiebel",12,""],
+  [288,"Bao Ebi Katsu","Crevette in Panko – Kohl – Yuzu-Mayo",12,"t"],[289,"Bao Tofu","Gebratener Tofu – Kimchi – Koriander",11,"v s"]]},
+ {id:"ramen",t:"Nudelsuppen",u:"",items:[
+  [290,"Shiro Ramen","Schweinebrühe – Chashu – Ramen-Nudeln – Mais – Ajitama-Ei – Nori",23,""],[291,"Miso Ramen","Misobrühe – Ramen-Nudeln – Hähnchen – Mais – Frühlingszwiebel",22,""],
+  [292,"Yasai Ramen","Gemüsebrühe – Ramen-Nudeln – Tofu – Shiitake – Pak Choi",20,"v"],[293,"Kitsune Udon","Dashi – Udon – Süsser Tofu – Frühlingszwiebel",17,"v"],
+  [294,"Akamiso Suppe","Wakame – Tofu – Frühlingszwiebel",6,"v"]]}
 ];
 const LIEB=[
- {img:"nigiri_sake_yaki",nr:9,n:"Sake Yaki",d:"Geflämmter Lachs, Avocado, Teriyaki · 2 Stück",p:10,hot:"Hausfavorit"},
- {img:"red_dragon",nr:73,n:"Red Dragon",d:"Crevette in Tempura, aussen Thunfisch & Tobiko · 8 Stück",p:35},
- {img:"caterpillar",nr:72,n:"Ebi Caterpillar",d:"Crevette in Tempura, aussen Avocado, Teriyaki · 8 Stück",p:32},
- {img:"crunchy_tempura",nr:81,n:"Lachs Tatar Crunchy",d:"In Tempura, Spicy Mayo, Lauch · 6 Stück",p:25},
- {img:"ramen",nr:"",n:"Shoyu Ramen",d:"Chashu, Ajitama-Ei, Narutomaki, Hühnerbrühe",p:24},
- {img:"bao",nr:"",n:"Bao Crispy Chicken",d:"Teriyaki, Gurke, Koriander, Gochujang-Mayo",p:11},
- {img:"sashimi",nr:"",n:"Sashimi",d:"Lachs, Thunfisch oder Crevetten · je 4 Stück",p:"9–10"},
- {img:"gyoza",nr:85,n:"Gyoza",d:"8 vegetarische Teigtaschen, Sweet-Soja-Dip",p:12},
- {img:"edamame",nr:127,n:"Edamame",d:"In der Schale mit Meersalz",p:7}
+ {img:"nigiri_sake_yaki",nr:205,n:"Aburi Shake",d:"Lachs abgeflämmt, mit Yuzu-Mayo · 2 Stück",p:9,hot:"Hausfavorit"},
+ {img:"red_dragon",nr:246,n:"Akai Roll",d:"Knusper-Crevette, oben Thunfisch und Sriracha · 8 Stück",p:30},
+ {img:"caterpillar",nr:247,n:"Midori Roll",d:"Knusper-Crevette unter Avocado · 8 Stück",p:28},
+ {img:"crunchy_tempura",nr:260,n:"Knusper Shake",d:"Lachs im Tempurateig, Frischkäse · 6 Stück",p:24},
+ {img:"ramen",nr:290,n:"Shiro Ramen",d:"Cremige Schweinebrühe, Chashu, Ei und Mais",p:23},
+ {img:"bao",nr:287,n:"Bao Buta",d:"Schweinebauch mit Hoisin im Dampfbrötchen",p:12},
+ {img:"sashimi",nr:273,n:"Sashimi Moriawase",d:"Drei Fische, fünfzehn Scheiben",p:34},
+ {img:"gyoza",nr:280,n:"Yaki Gyoza",d:"Sechs angebratene Teigtaschen, Ponzu-Dip",p:11},
+ {img:"edamame",nr:282,n:"Edamame",d:"Grüne Sojabohnen mit Yuzu-Salz",p:7}
 ];
 const REV=[
  {n:"Mara",t:"vor 2 Wochen",q:"Die Platte für vier war ein Fest – schön angerichtet, alles frisch, und das Licht im Salon macht den Abend."},
@@ -1065,7 +1054,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.ta
   const ACC={"nigiri": "#ff8f70", "maki": "#9ed36a", "futo": "#f4e3b5", "ura": "#ff6f91", "crunchy": "#e8cf8f", "sashimi": "#ff5e5e", "vor": "#c9a0ff", "ramen": "#ffb347"}; KARTE.forEach(c=>c.acc=ACC[c.id]||"#e8cf8f");
   const q=$("#q"), sheet=$("#sheet"), sw=$("#sw"), board=$("#board"), act=new Set();
   let mode="cat";
-  const TG={v:'<i class="v">VEGI</i>',s:'<i class="s">SCHARF</i>',fl:'<i class="fl">GEFLÄMMT</i>',t:'<i class="t">TEMPURA</i>'};
+  const TG={v:'<i class="v">VEG</i>',s:'<i class="s">PIKANT</i>',fl:'<i class="fl">FLAMME</i>',t:'<i class="t">KNUSPRIG</i>'};
   const row=(it,acc)=>{ const [nr,n,d,p,tg]=it; const tags=tg.split(" ").filter(x=>TG[x]).map(x=>TG[x]).join("");
     return `<div class="row" style="--acc:${acc}"><span class="rn">${nr?("Nr. "+nr):"·"}</span><span class="rt" title="${esc(n)}">${esc(n)}${tags?`<span class="tg">${tags}</span>`:""}</span><span class="rp">Fr. ${fr(p)}</span>${d?`<span class="rd">${esc(d)}</span>`:""}</div>`; };
   const match=(it,s)=>{ const [nr,n,d,,tg]=it; const T=tg.split(" ");
@@ -1148,12 +1137,12 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.ta
 (function(){
   const find=nr=>{ for(const c of KARTE) for(const it of c.items) if(it[0]===nr) return {nr,n:it[1],p:it[3],stk:+(c.u.match(/\d+/)||[1])[0]}; };
   const POOLS={
-    mix:[73,70,56,36,9,55,20,10,63,49,3,14],
-    crunchy:[67,65,57,49,81,50,11,76,48,83,51,77],
-    vegi:[63,54,25,31,45,80,15,14,17,76,16,79],
-    cooked:[69,72,71,62,55,46,50,8,57,29,63,24]
+    mix:[246,248,245,240,205,214,201,215,247,252,202,210],
+    crunchy:[260,261,263,264,262,246,247,253,230,251,243,244],
+    vegi:[242,243,262,220,224,232,210,211,212,213,218,254],
+    cooked:[247,249,251,253,244,230,229,223,227,217,204,264]
   };
-  let pers=4,hung=14,stil="mix",lines=[],started=false;
+  let pers=4,hung=13,stil="mix",lines=[],started=false;
   const out=$("#pers"), ol=$("#boardList"), board=$("#pBoard"), touched=new Set();
   const mark=n=>{ touched.add(n); $$("#pSteps li").forEach(li=>li.classList.toggle("done", touched.has(+li.dataset.s) || (li.dataset.s==="4"&&started))); };
   const start=()=>{ if(started) return; started=true; board.classList.remove("empty"); $("#pTot").classList.remove("off"); $("#pOrder").classList.remove("idle");
@@ -1276,13 +1265,13 @@ $$(".reveal,#moved").forEach(el=>io.observe(el));
 "Suchergebnis":"Search results","Gut zu wissen":"Good to know","Nichts gefunden – versuchen Sie «Lachs», «Avocado» oder eine Nummer.":"Nothing found – try “salmon”, “avocado” or a number.",
 "Crunchy Rollen":"Crunchy Rolls","Vorspeisen & Bao":"Starters & Bao","Ramen & Suppen":"Ramen & Soups",
 "Sushi-Platte für":"A sushi platter for","Ihre Gruppe":"your group","in 10 Sekunden zusammengestellt":"put together in 10 seconds",
-"Wählen Sie Personen, Hunger und Stil – wir zeigen sofort, was auf die Platte kommt und was es kostet. Dann einfach anrufen und bestellen.":"Choose people, appetite and style – we show you straight away what goes on the platter and what it costs. Then simply ring us and order.",
+"Sagen Sie uns, wie viele kommen, wie gross der Appetit ist und was Sie mögen – Auswahl und Preis stehen gleich daneben. Bestellt wird per Telefon.":"Choose people, appetite and style – we show you straight away what goes on the platter and what it costs. Then simply ring us and order.",
 "So funktioniert es":"How it works","Personen":"People","Hunger":"Appetite","Stil":"Style","Ihre Platte":"Your platter",
 "Grosse Sushi-Platte auf Schiefer, von oben":"Large sushi platter on slate, seen from above",
 "Stück":"pieces","pro Person":"per person","Eine Person weniger":"One person fewer","Eine Person mehr":"One more person",
 "Klein":"Light","Normal":"Regular","Gross":"Hearty","Gemischt":"Mixed",
-"Wählen Sie oben – die Platte füllt sich.":"Choose above – the platter fills up.",
-"Diese Platte telefonisch bestellen":"Order this platter by phone","Platte bestellen":"Order the platter","Liste kopieren":"Copy list","Kopiert ✓":"Copied ✓","Bitte markieren":"Please select the text",
+"Treffen Sie oben Ihre Wahl – die Liste erscheint hier.":"Choose above – the platter fills up.",
+"Platte am Telefon bestellen":"Order this platter by phone","Platte bestellen":"Order the platter","Liste kopieren":"Copy list","Kopiert ✓":"Copied ✓","Bitte markieren":"Please select the text",
 "Ideal für Geburtstage, Feste und Take-away. Am Telefon einfach die Nummern durchgeben.":"Ideal for birthdays, parties and takeaway. Just read out the numbers on the phone.",
 "Musterentwurf · Hinweis für Kiku":"Draft design · note for Kiku",
 "Gäste stellen ihre Platte selbst zusammen und rufen mit fertiger Bestellung an – weniger Rückfragen am Telefon.":"Guests put their platter together themselves and ring with their order ready – fewer questions on the phone.",
@@ -1313,9 +1302,9 @@ $$(".reveal,#moved").forEach(el=>io.observe(el));
 "Chashu, Ajitama-Ei, Narutomaki, Hühnerbrühe":"Chashu, ajitama egg, narutomaki, chicken broth",
 "Teriyaki, Gurke, Koriander, Gochujang-Mayo":"Teriyaki, cucumber, coriander, gochujang mayo",
 "Lachs, Thunfisch oder Crevetten · je 4 Stück":"Salmon, tuna or prawns · 4 pieces each",
-"8 vegetarische Teigtaschen, Sweet-Soja-Dip":"8 vegetarian dumplings, sweet soy dip","In der Schale mit Meersalz":"In the pod with sea salt"
+"8 vegetarische Teigtaschen, Sweet-Soja-Dip":"8 vegetarian dumplings, sweet soy dip","In der Schale mit Meersalz":"In the pod with sea salt","Favoriten":"Favourites","Speisekarte":"Menu","Lokal":"Restaurant","Sushi vom Brett, Ramen aus dem Topf und Sake-Drinks – an der Lindengasse 9 in der Luzerner Altstadt.":"Sushi from the board, ramen from the pot and sake drinks – on Lindengasse 9 in Lucerne’s old town.","Was am Tresen am häufigsten bestellt wird – frisch gerollt.":"What gets ordered most at the counter – freshly rolled.","Jedes Gericht hat eine Nummer – für Bestellungen am Telefon genügt sie.":"Every dish has a number – that’s all you need to order by phone.","Suchen: Gelbschwanz, Tofu, Udon, 246 …":"Search: yellowtail, tofu, udon, 246 …","Vegetarisch":"Vegetarian","Gekocht":"Cooked","Pikant":"Spicy","Abgeflämmt":"Flamed","Knusprig":"Crispy","Nichts Rohes: gekocht, abgeflämmt oder frittiert":"Nothing raw: cooked, flamed or fried","Nichts Rohes":"Nothing raw","VEG":"VEG","PIKANT":"SPICY","FLAMME":"FLAMED","KNUSPRIG":"CRISPY","Grosse Rollen":"Big rolls","Inside-Out":"Inside-out","Tempura-Rollen":"Tempura rolls","Kleine Teller & Bao":"Small plates & bao","Nudelsuppen":"Noodle soups","Die Platte":"The platter","für den Abend":"for the evening","in drei Schritten geplant":"planned in three steps","Sagen Sie uns, wie viele kommen, wie gross der Appetit ist und was Sie mögen – Auswahl und Preis stehen gleich daneben. Bestellt wird per Telefon.":"Tell us how many are coming, how hungry you are and what you like – the selection and price appear right next to it. Orders are taken by phone.","Gäste":"Guests","Appetit":"Appetite","Geschmack":"Taste","Ihre Auswahl":"Your selection","Leicht":"Light","Mittel":"Medium","Hungrig":"Hungry","Bunt":"Mixed","Ohne Fisch":"No fish","Treffen Sie oben Ihre Wahl – die Liste erscheint hier.":"Make your choice above – the list appears here.","Platte am Telefon bestellen":"Order the platter by phone","Auswahl kopieren":"Copy selection","Die Theke":"The counter","Ein Glas vorab oder zum Ausklang des Abends.":"A glass to start or to round off the evening.","Hausgemacht":"House-made","Sake Drinks":"Sake Drinks","Sake aus dem Haus":"House sake","Bier & Schaumwein":"Beer & sparkling","Japan · 4,9 % · 5 dl":"Japan · 4.9% · 50 cl","Stimmen":"Voices","unserer Gäste":"of our guests","Unsere":"Our","Preise in CHF, Mehrwertsteuer inbegriffen.":"Prices in CHF, VAT included.","Unverträglichkeiten? Sagen Sie es uns bei der Bestellung.":"Intolerances? Let us know when you order.","Lachs abgeflämmt, mit Yuzu-Mayo · 2 Stück":"Flamed salmon with yuzu mayo · 2 pieces","Knusper-Crevette, oben Thunfisch und Sriracha · 8 Stück":"Crispy prawn, topped with tuna and sriracha · 8 pieces","Knusper-Crevette unter Avocado · 8 Stück":"Crispy prawn under avocado · 8 pieces","Lachs im Tempurateig, Frischkäse · 6 Stück":"Salmon in tempura batter, cream cheese · 6 pieces","Cremige Schweinebrühe, Chashu, Ei und Mais":"Creamy pork broth, chashu, egg and corn","Schweinebauch mit Hoisin im Dampfbrötchen":"Pork belly with hoisin in a steamed bun","Drei Fische, fünfzehn Scheiben":"Three fish, fifteen slices","Sechs angebratene Teigtaschen, Ponzu-Dip":"Six pan-fried dumplings, ponzu dip","Grüne Sojabohnen mit Yuzu-Salz":"Green soybeans with yuzu salt","Teile":"pieces","je Gast":"per guest","CHF":"CHF","≈ CHF":"≈ CHF","Nigiri und Rollen neben einer schlanken Lampe, grüner Tee":"Nigiri and rolls next to a slim lamp, green tea","Gemischte Platte für vier, Blick von oben":"Mixed platter for four, from above","Kleine Rollen mit Thunfisch und Gurke":"Small rolls with tuna and cucumber","Lange Holztheke mit Sakeflaschen":"Long wooden counter with sake bottles","Unser Lokal liegt an der":"Our restaurant is on",", ein paar Schritte von der Reuss. Dunkles Holz, weiche Bänke und warmes Licht über jedem Tisch.":", a few steps from the Reuss. Dark wood, soft banquettes and warm light over every table.","Sake-Drinks aus dem Haus, passend zu Sushi – und ein helles Lager aus Luzern.":"House sake drinks that suit sushi – plus a pale lager from Lucerne."
   };
-  const ING={
+  const ING={"Geflämmter Gelbschwanz":"flamed yellowtail","Ponzu":"ponzu","Süsser Tofu":"sweet tofu","Yuzu-Mayo":"yuzu mayo","Shiso":"shiso","Gelbschwanz":"yellowtail","Natto":"natto","Tamago":"tamago","Shiitake":"shiitake","Spinat":"spinach","Hähnchen":"chicken","Jakobsmuschel":"scallop","Edamame-Creme":"edamame cream","Süsskartoffel in Tempura":"tempura sweet potato","Hähnchen in Panko":"panko chicken","Kokosflocken":"coconut flakes","Thunfisch in Tempura":"tempura tuna","15 Stück":"15 pieces","6 Teigtaschen":"6 dumplings","Schwein":"pork","Ponzu-Dip":"ponzu dip","Gemüse":"vegetables","in der Schote":"in the pod","Yuzu-Salz":"yuzu salt","Chili":"chilli","Knoblauch":"garlic","Tofu in Tempura":"tempura tofu","Dashi":"dashi","Hähnchen in Tempura":"tempura chicken","Zitrone":"lemon","Schweinebauch":"pork belly","Hoisin":"hoisin","Crevette in Panko":"panko prawn","Kohl":"cabbage","Schweinebrühe":"pork broth","Mais":"corn","Misobrühe":"miso broth","Gemüsebrühe":"vegetable broth",
 "1 Stück":"1 piece","5 Stück":"5 pieces","5 Calamari":"5 calamari","5 Crevetten":"5 prawns","8 Teigtaschen":"8 dumplings","Aal in Tempura":"tempura eel","Ajitama-Ei":"ajitama egg",
 "Avocado":"avocado","Avocado in Tempura":"tempura avocado","Babymais":"baby corn","Chashu":"chashu","Chili-Mayo":"chilli mayo","Chiliöl":"chilli oil","Crevette":"prawn",
 "Crevette in Tempura":"tempura prawn","Crunchy Maki in Tempura":"crunchy maki in tempura","Erbsen":"peas","Frischkäse":"cream cheese","Frühlingszwiebel":"spring onion",
@@ -1382,13 +1371,18 @@ $$(".reveal,#moved").forEach(el=>io.observe(el));
 
   const H=document.documentElement, TITLE={de:document.title,en:"Kiku · Sushi Bar Luzern – Sushi, Ramen & Cocktails on Lindengasse 9"};
   const btns=[...document.querySelectorAll(".lang button")];
+  const held=[]; addEventListener("resize",()=>{ held.forEach(e=>e.style.minHeight=""); held.length=0; });
   function set(l,keep){
     if(l!=="en") l="de"; if(l===lang&&keep!=="init") return;
     
     let anc=null, top0=0; const hh=($("#hdr")||{}).offsetHeight||0;
-    if(keep!=="init" && scrollY>0){ anc=[...document.querySelectorAll("main img, main h2, main h3, main .frame, main .board2, main .day, main .dish, main .sleeve, footer h4")].find(e=>{ const r=e.getBoundingClientRect(); return r.width>0 && r.top>=hh && r.top<innerHeight; })
+    if(keep!=="init" && scrollY>0){ anc=[...document.querySelectorAll("main *, footer *")].find(e=>{ if(e.children.length && !e.matches("img,button,p,h2,h3,h4,li,.row,.ph,output")) return false; const r=e.getBoundingClientRect(); return r.width>0 && r.height>0 && r.top>=hh && r.top<innerHeight; })
       || document.elementFromPoint(innerWidth/2, hh+Math.min(140,(innerHeight-hh)/3)); if(anc) top0=anc.getBoundingClientRect().top; }
+    
+    held.forEach(e=>e.style.minHeight=""); held.length=0;
+    const tx=keep==="init"?[]:[...document.querySelectorAll("main *, footer *")].filter(e=>!e.closest("#sheet,.sheet")&&getComputedStyle(e).display!=="inline").map(e=>[e,e.getBoundingClientRect().height]);
     lang=l; walk(document.body); H.lang=l==="en"?"en-GB":"de-CH"; document.title=TITLE[l];
+    tx.forEach(([e,h0])=>{ if(e.getBoundingClientRect().height<h0-1){ e.style.minHeight=h0+"px"; held.push(e); } });
     btns.forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===l));
     if(anc&&anc.isConnected){ const d=anc.getBoundingClientRect().top-top0; if(Math.abs(d)>0.5){ H.style.scrollBehavior="auto"; window.scrollBy(0,d); H.style.scrollBehavior=""; } }
     try{ localStorage.setItem("kiku-lang",l); }catch(_){}
