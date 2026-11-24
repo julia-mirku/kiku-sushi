@@ -13,7 +13,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%230d241a%27 stroke=%27%23e8cf8f%27 stroke-width=%273%27/%3E%3Ctext x=%2732%27 y=%2743%27 text-anchor=%27middle%27 font-family=%27Georgia%27 font-style=%27italic%27 font-size=%2730%27 fill=%27%23fff%27%3EK%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Karla:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,100..900;1,8..30,100..900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/s/hero_hoch_m.jpg" media="(max-width: 760px)" fetchpriority="high">
 <link rel="preload" as="image" href="img/hero_hoch_1200.jpg" media="(orientation: portrait) and (min-width: 761px) and (max-width: 1100px)" fetchpriority="high">
 <link rel="preload" as="image" href="img/s/hero_quer_1600.jpg" imagesrcset="img/s/hero_quer_1600.jpg 1600w, img/s/hero_quer_2400.jpg 2400w" imagesizes="100vw" media="(min-width: 761px) and (orientation: landscape), (min-width: 1101px)" fetchpriority="high">
@@ -23,7 +23,7 @@
   --cream:#f4ecdc; --paper:#efe6d3; --ink:#15201a;
   --gold:#c9a45c; --gold2:#e8cf8f; --lamp:#ffc861;
   --neon:#ff5fa8; --neonG:#7dffb7; --tuna:#d8434a;
-  --serif:"Fraunces", Georgia, serif; --sans:"Karla", system-ui, sans-serif;
+  --serif:"Piazzolla", Georgia, serif; --sans:"Barlow", system-ui, sans-serif;
   --hdr:64px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -637,6 +637,18 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
 
 .sleeve{box-shadow:0 0 0 1px rgba(232,207,143,.25),0 12px 12px -8px rgba(0,0,0,.75)}
 @media (hover:hover){.sleeve:hover{box-shadow:0 0 0 1px rgba(232,207,143,.45),0 16px 14px -8px rgba(0,0,0,.8)}}
+
+
+.hdr.solid{background:rgba(10,26,19,.42)}
+
+@media (min-width:1284px) and (max-width:1360px){.sidewrap>.sa-prev{left:-50px}.sidewrap>.sa-next{right:-50px}}
+@media (min-width:601px) and (max-width:1283px){.sidewrap{padding-inline:54px}.sidewrap>.sa-prev{left:0}.sidewrap>.sa-next{right:0}
+  .sidewrap:has(> #board){padding-inline:0}#kPrev,#kNext{display:none!important}}
+
+@media (min-width:761px) and (max-height:820px){
+  .sheet{height:calc(5 * 62px)}.sheet .half{grid-auto-rows:62px}.sheet .row{padding:4px 8px}.sheet .row .rd{-webkit-line-clamp:1}
+  .karte h2{font-size:clamp(30px,3.4vw,44px)}.khead{gap:8px 24px}.kfilters{margin-top:8px}.board2{margin-top:10px;padding-top:10px}.bhead{padding-bottom:6px}.bnav{padding-top:6px}
+}
 .kl{width:100%;height:100%;display:block}.pre .kl.big{width:min(46vw,230px);height:auto;filter:drop-shadow(0 0 22px rgba(255,200,97,.35))}.sleeve .band .kl{width:46px;height:46px}
 .post .txt{max-width:660px}.post h1{font-size:clamp(44px,min(5.8vw,10vh),92px)}
 </style>
@@ -841,12 +853,12 @@ footer.foot{background:url(img/leinen.png) 0 0/256px 256px,linear-gradient(180de
 
 <footer class="foot">
   <div class="wrap fgrid">
-    <div class="fbrand"><b>Kiku · Sushi Bar</b><span>Lindengasse 9<br>9000 Luzern</span></div>
+    <div class="fbrand"><b>Kiku · Sushi Bar</b><span>Lindengasse 9<br>6004 Luzern</span></div>
     <div><h4>Kontakt</h4><a href="tel:+41410000000">041 000 00 00</a><a href="mailto:hallo@kiku.example">hallo@kiku.example</a></div>
     <div><h4>Öffnungszeiten</h4><ul class="fhours" id="fhours"></ul></div>
     <div><h4>Rechtliches</h4><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
   </div>
-  <div class="wrap fbot"><span>Entwurf · nur zur Ansicht</span><span class="by">Website: <a href="https://webstudio-mirku.ch" target="_blank" rel="noopener">Julia &amp; Robin Mirku</a></span></div>
+  <div class="wrap fbot"><span>Musterentwurf · fiktive Angaben</span><span class="by">Website: <a href="https://webstudio-mirku.ch" target="_blank" rel="noopener">Julia &amp; Robin Mirku</a></span></div>
 </footer>
 
 <nav class="dock" id="dock" aria-label="Schnellzugriff"><a href="#karte">Karte</a><a href="#platte">Platte</a><a href="#salon">Salon</a><a href="#bar">Bar</a></nav>
@@ -1233,7 +1245,7 @@ $$(".reveal,#moved").forEach(el=>io.observe(el));
 "Bis":"See you","heute Abend?":"this evening?","heute Mittag?":"at lunchtime?","morgen?":"tomorrow?","bald?":"soon?","Tisch reservieren & Bestellungen":"Table bookings & orders","Route planen":"Get directions",
 "Anfragen für Gruppen & Feste":"Enquiries for groups & parties",
 "Karte der Luzerner Altstadt an der Reuss":"Map of Luzern’s old town: Kiku on Lindengasse 9, near Marktplatz and Bohl",
-"Route in Google Maps":"Directions in Google Maps","Entwurf · nur zur Ansicht":"Draft · preview only","Website-Entwurf von Julia & Robin Mirku · nur zur Ansicht – einige Links und Funktionen sind noch nicht aktiv.":"Website draft by Julia & Robin Mirku · preview only – some links and features are not active yet.",
+"Route in Google Maps":"Directions in Google Maps","Musterentwurf · fiktive Angaben":"Sample design · fictitious details",
 "Schnellzugriff":"Quick access","Anrufen":"Call","Platte":"Platter","Route":"Directions",
 
 "Geschlossen":"Closed","Kontakt":"Contact","Öffnungszeiten":"Opening hours","Rechtliches":"Legal","Impressum":"Legal notice","Datenschutz":"Privacy policy","Mo":"Mo","Di":"Tu","Mi":"We","Do":"Th","Fr":"Fr","Sa":"Sa","So":"Su",
@@ -1315,7 +1327,8 @@ $$(".reveal,#moved").forEach(el=>io.observe(el));
     if(l!=="en") l="de"; if(l===lang&&keep!=="init") return;
     
     let anc=null, top0=0; const hh=($("#hdr")||{}).offsetHeight||0;
-    if(keep!=="init" && scrollY>0){ anc=document.elementFromPoint(innerWidth/2, hh+Math.min(140,(innerHeight-hh)/3)); if(anc) top0=anc.getBoundingClientRect().top; }
+    if(keep!=="init" && scrollY>0){ anc=[...document.querySelectorAll("main img, main h2, main h3, main .frame, main .board2, main .day, main .dish, main .sleeve, footer h4")].find(e=>{ const r=e.getBoundingClientRect(); return r.width>0 && r.top>=hh && r.top<innerHeight; })
+      || document.elementFromPoint(innerWidth/2, hh+Math.min(140,(innerHeight-hh)/3)); if(anc) top0=anc.getBoundingClientRect().top; }
     lang=l; walk(document.body); H.lang=l==="en"?"en-GB":"de-CH"; document.title=TITLE[l];
     btns.forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===l));
     if(anc&&anc.isConnected){ const d=anc.getBoundingClientRect().top-top0; if(Math.abs(d)>0.5){ H.style.scrollBehavior="auto"; window.scrollBy(0,d); H.style.scrollBehavior=""; } }
