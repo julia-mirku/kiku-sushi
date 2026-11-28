@@ -197,7 +197,7 @@ h2 i{font-weight:400;color:var(--gold2)}
 .empty{padding:30px 8px;color:#aaa18e}
 
 
-.noren{position:relative;display:flex;gap:5px;margin-top:16px;padding-top:8px;overflow-x:auto;scrollbar-width:none;touch-action:pan-x pan-y}
+.noren{position:relative;display:flex;gap:5px;margin-top:16px;padding-top:8px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;touch-action:pan-x pan-y}
 .noren::-webkit-scrollbar{display:none}
 .noren::before{content:"";position:absolute;left:0;right:0;top:2px;height:5px;border-radius:3px;background:linear-gradient(#f0d792,#9b7a37);box-shadow:0 2px 4px rgba(0,0,0,.4);min-width:100%}
 .nren{flex:1 0 auto;position:relative;padding:16px 14px 14px;min-width:96px;text-align:center;background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid rgba(201,164,92,.22);border-top:0;border-radius:0 0 10px 10px;color:#d9d0bd;font:600 15px/1.15 var(--serif);transform-origin:top center;transition:transform .35s cubic-bezier(.2,.8,.2,1),color .2s,background .2s,box-shadow .2s}
@@ -503,7 +503,7 @@ footer .wrap.fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
 
 
 
-.dishes{display:flex!important;gap:clamp(14px,2vw,26px);overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:none;padding:12px 2px 6px;margin:-12px -2px 0}
+.dishes{display:flex!important;gap:clamp(14px,2vw,26px);overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:none;padding:12px 2px 6px;margin:-12px -2px 0}
 .dishes::-webkit-scrollbar{display:none}
 .dishes .dish{flex:0 0 calc((100% - 2 * clamp(14px,2vw,26px)) / 3);scroll-snap-align:start}
 @media (max-width:860px){.dishes .dish{flex-basis:calc((100% - clamp(14px,2vw,26px)) / 2)}}
@@ -1049,7 +1049,7 @@ const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
   function loop(){ raf=0; if(done) return; p+=(target-p)*0.085; if(Math.abs(target-p)<0.002) p=target; set(p); check(); if(!done) raf=requestAnimationFrame(loop); }
   const go=()=>{ if(!raf && !done) raf=requestAnimationFrame(loop); };
   const push=d=>{ if(target>=1&&d>0) extra+=d; target=Math.max(0,Math.min(1,target+d)); if(target>.985) target=1; if(target>=1 && !tFull){ tFull=now(); setTimeout(check,950); } go(); check(); };
-  const swallow=e=>{ if(done){ if(!pass && now()-doneAt<650) e.preventDefault(); return true; } e.preventDefault(); return false; };
+  const swallow=e=>{ if(done){ return true; } e.preventDefault(); return false; };
   if(reduce || scrollY>10 || location.hash){ target=1; p=1; set(1); done=true; hero.classList.remove("off"); return; }
   html.classList.add("locked"); scrollTo(0,0);
   
